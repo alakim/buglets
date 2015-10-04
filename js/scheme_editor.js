@@ -9,6 +9,9 @@ define(["jquery", "html", "raphael", "buglet", "commands"], function($, $H, $R, 
 	var templates = {
 		main: function(){with($H){
 			return div(
+				h2("Scheme Editor"),
+				div({"class":"btHide"}, "Hide"),
+				div({"style":"clear:both;"}),
 				select({"class":"selBuglet"},
 					option({value:""}, "-----"),
 					apply(Buglet.instances, function(bg){
@@ -77,6 +80,9 @@ define(["jquery", "html", "raphael", "buglet", "commands"], function($, $H, $R, 
 				}
 				_.selectedBuglet = Buglet.instances[bgIdx];
 				buildView(_.selectedBuglet);
+			});
+			_.panel.find(".btHide").click(function(){
+				$(this).parent().parent().hide();
 			});
 		}
 	});

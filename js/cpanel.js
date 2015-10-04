@@ -4,6 +4,8 @@ define(["jquery", "html", "settings", "buglet"], function($, $H, $S, Buglet){
 		main: function(){with($H){
 			return div(
 				h2("Control Panel"),
+				div({"class":"btHide"}, "Hide"),
+				div({"style":"clear:both;"}),
 				input({type:"button", value:"Start", "class":"btStart"}),
 				table({border:0},
 					tr(td("Show paths"), td(input({type:"checkbox", "class":"cbShowPaths"}))),
@@ -79,6 +81,9 @@ define(["jquery", "html", "settings", "buglet"], function($, $H, $S, Buglet){
 					buglet.hurt();
 				}				
 			});
+		});
+		_.panel.find(".btHide").click(function(){
+			$(this).parent().parent().hide();
 		});
 	}
 

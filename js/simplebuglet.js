@@ -87,6 +87,7 @@ define(["jquery", "html", "oop", "buglet"], function($, $H, $OOP, Buglet){
 		hurt:function(){var _=this;
 			_.setHealth(_.getHealth() - 1);
 			if(_.getHealth()==0){
+				alert("Баглет умер.");
 				_.respawn();
 			}
 		}
