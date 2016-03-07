@@ -1,4 +1,4 @@
-define(["jquery", "html", "settings", "buglet"], function($, $H, $S, Buglet){
+define(["jquery", "html", "settings", "buglet", "field"], function($, $H, $S, Buglet, Field){
 	
 	var templates = {
 		main: function(){with($H){
@@ -84,6 +84,7 @@ define(["jquery", "html", "settings", "buglet"], function($, $H, $S, Buglet){
 		});
 		_.panel.find(".btHide").click(function(){
 			$(this).parent().parent().hide();
+			Field.resize();
 		});
 	}
 

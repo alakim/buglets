@@ -27,7 +27,7 @@ requirejs([
 	// $S.deleteOldPath = false;
 	
 	var field = new Field("out");
-	var schemeEditor = new SchemeEditor("editPnl");
+	// var schemeEditor = new SchemeEditor("editPnl");
 	
 	(function(){ 
 		
@@ -60,7 +60,8 @@ requirejs([
 		bg3.show();
 		
 		var cpnl = new CPanel("cpanel"); // после создания всех баглетов
-		schemeEditor.view();
+		//schemeEditor.view();
+		new SchemeEditor("editPnl").view();
 
 	})();
 	

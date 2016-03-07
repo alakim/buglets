@@ -20,7 +20,8 @@ h2{font-size:16px;}
 
 #out{
 	float:left;
-	width:920px;
+	/*width:920px;*/
+	width:calc(96vw - 300px);
 	height:600px;
 	border:1px solid #ccc;
 }

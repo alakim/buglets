@@ -1,4 +1,4 @@
-define(["jquery", "html", "raphael", "buglet", "commands"], function($, $H, $R, Buglet, commands){
+define(["jquery", "html", "raphael", "buglet", "commands", "field"], function($, $H, $R, Buglet, commands, Field){
 	
  	function SchemeEditor(panelOrID){var _=this;
 		_.panel = typeof(panelOrID)=="string"?$("#"+panelOrID):$(panelOrID);
@@ -83,6 +83,7 @@ define(["jquery", "html", "raphael", "buglet", "commands"], function($, $H, $R, 
 			});
 			_.panel.find(".btHide").click(function(){
 				$(this).parent().parent().hide();
+				Field.resize();
 			});
 		}
 	});
